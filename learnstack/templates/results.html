@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leanstack</title>
+</head>
+<body>
+    {% if courses %}
+    <h2>Search results:</h2>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.name }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Top 10 videos:</h2>
+    <ul>
+        {% for video in videos %}
+            <li><a href="{{ video.url }}">{{ video.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
